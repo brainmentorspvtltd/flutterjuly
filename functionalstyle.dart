@@ -1,12 +1,12 @@
 void main(){
-  loop(5, cube);
-  loop(5, evenOdd);
+  server(5, cube);
+  server(5, evenOdd);
   List<Function> results = giveMeTwoFunction();
   print("CUBE CALL ${results[0](5)}");
 }
-void loop(int n, Function fn){
+void server(int n, Function result){
   for(int i = 1; i<=n; i++){
-    print(fn(i));
+    print(result(i));
   }
 }
 List<Function> giveMeTwoFunction(){
